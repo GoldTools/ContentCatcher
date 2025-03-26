@@ -1,33 +1,41 @@
-# ContentCatcher - 智能内容捕手 | 视频浏览记录不丢失
+# ContentCatcher - Smart Content Assistant | Never Lose Your Video History
 
-## 简介
+<div align="center">
 
-**ContentCatcher** 让每一次视频浏览都被记录，不再错过感兴趣的内容，对抗算法茧房的最佳助手。
+[🌟 English](README_EN.md) | [🇨🇳 中文](README.md) 
 
-🔥 让每一次视频浏览都被记录，不再错过感兴趣的内容，对抗算法茧房的最佳助手。
+<img src="./assets/logo.png" alt="ContentCatcher Logo" width="120"/>
 
-## 功能特性
+</div>
 
-### 🕸️ 视频内容捕获
-- **自动捕获**：后台静默捕获浏览的视频内容，即使未主动收藏也不会丢失
-- **多平台支持**：支持B站/Youtube等平台，通过插件化架构可扩展支持任意视频网站
-- **无痕浏览**：支持无痕浏览模式下的内容捕获，帮助你突破算法推荐的信息茧房
-- **智能过滤**：智能过滤广告内容，只保留真正有价值的视频信息
+## Introduction
 
-### 📋 智能内容管理
-- **简洁界面**：简洁清晰的浏览记录界面，支持按平台分类查看历史视频
-- **智能分级**：智能数据分级，临时浏览记录保留一周，重要内容一键永久收藏
-- **自动去重**：智能去重功能，自动合并相同视频的多次浏览记录
+**ContentCatcher** ensures every video you watch is tracked, so you never miss intriguing content again. Your ultimate tool to break free from algorithmic filter bubbles.
 
-### 🔐 隐私与安全
-- **本地存储**：所有数据完全存储在本地，无服务器上传，保护个人隐私
-- **轻量设计**：轻量级设计，对浏览体验零影响
-- **用户控制**：无需注册账号，数据完全由用户控制
+🔥 Never Miss a Moment - Track every video, combat algorithmic bias, and reclaim your browsing freedom.
 
-### 🧩 扩展与定制
-- **插件化架构**：开放的插件化架构，开发者可按配置说明扩展支持更多视频平台
-- **广泛兼容**：支持主流浏览器（Chrome/Edge），提供一致的使用体验
+## Core Features
+
+### 🕸️ Intelligent Content Capture
+- **Silent Capture**: Background capture of all viewed videos, even if not bookmarked
+- **Multi-Platform**: Supports Bilibili, YouTube, and more via plugin-based architecture (expandable to any platform)
+- **Incognito Mode**: Works seamlessly in incognito mode to bypass recommendation algorithms
+- **Smart Filtering**: Smart ad filtering preserves only meaningful video content
+
+### 📋 Smart Content Management
+- **Clean Interface**: Clean timeline interface with platform-specific browsing history
+- **Auto-Tiered Storage**: Temporary records (7-day retention) + permanent bookmarks
+- **Smart Deduplication**: Merges repeat views automatically
+
+### 🔐 Privacy by Design
+- **Local Storage**: 100% local storage – zero data uploads, zero tracking
+- **Lightweight**: No impact on browsing speed
+- **User Control**: No account required – you own your data
+
+### 🧩 Extend & Customize
+- **Plugin Framework**: Open plugin framework for developers to add new platforms
+- **Wide Compatibility**: Full compatibility with Chrome/Edge browsers
 
 ---
 
-**ContentCatcher** 完全免费，帮你在信息爆炸的时代不再错过真正感兴趣的内容，让每一次浏览都有迹可循。 ❤️
+**ContentCatcher** is completely free, helping you not to miss out on truly interesting content in an information-overloaded era, ensuring every browsing experience is traceable. ❤️
