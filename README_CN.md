@@ -39,3 +39,45 @@
 ---
 
 **ContentCatcher** 完全免费，帮你在信息爆炸的时代不再错过真正感兴趣的内容，让每一次浏览都有迹可循。 ❤️
+
+## 开始使用
+
+### 安装与插件设置
+ContentCatcher 需要插件才能与不同视频平台配合使用。以下是设置步骤：
+
+1. 从 Chrome 网上应用店（或其他浏览器扩展商店）安装 ContentCatcher
+2. 点击 ContentCatcher 图标并选择"设置"，打开扩展设置页面
+   
+   ![进入设置](https://tvax1.sinaimg.cn/large/007WazT0ly1hztfs11hztj30sg0omn5o.jpg)
+
+3. 从 GitHub 仓库下载官方插件（https://github.com/GoldTools/ContentCatcher/tree/main/plugins）
+4. 将下载的插件拖入 ContentCatcher 的插件管理页面
+   
+   ![导入插件](https://tvax2.sinaimg.cn/large/007WazT0ly1hzuffxlio3j30w00w70yk.jpg)
+
+> 注意：删除插件后会自动删除该插件对应平台的所有视频记录。
+
+### 基本使用
+安装 ContentCatcher 并导入插件后，访问支持的网站即可自动开始捕获视频内容。
+
+![基本使用](https://tvax4.sinaimg.cn/large/007WazT0ly1hzud72xoyvj30vy0mrnf8.jpg)
+
+#### 功能特点
+- **浏览历史**：用户手动点击或主动访问的视频会记录在浏览历史标签中
+- **推荐视频**：网站刷新后算法推荐的视频会被记录在推荐标签中
+- **收藏记录**：用户在插件中主动点击收藏的视频会永久存储在收藏标签中
+
+### 数据管理
+ContentCatcher 采用智能的数据管理机制：
+- 浏览历史默认保留 7 天
+- 推荐视频记录默认保留 1 小时
+- 收藏数据永久保留，除非手动删除
+
+![设置界面](https://tvax2.sinaimg.cn/large/007WazT0ly1hzudzhdo5dj30vy0mrjwn.jpg)
+
+### 无痕模式支持
+要在无痕模式下使用 ContentCatcher：
+1. 打开浏览器的扩展管理页面（例如，chrome://extensions/）
+2. 找到 ContentCatcher，点击"详情"，并启用 "在无痕模式下启用" 选项
+
+![无痕模式](https://tvax4.sinaimg.cn/large/007WazT0ly1hzuehmx2u1j30ic0np41j.jpg)
