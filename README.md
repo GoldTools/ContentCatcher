@@ -8,6 +8,12 @@
 
 </div>
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Core Features](#core-features)
+- [Getting Started](#getting-started)
+
 ## Introduction
 
 **ContentCatcher** helps you record every video browsing, so you won't miss any interesting content
