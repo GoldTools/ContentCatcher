@@ -1,4 +1,4 @@
-# ContentCatcher - Smart Content Assistant | Never Lose Your Video History
+# ContentCatcher - Smart Content Catcher | No Lost Browsing History
 
 <div align="center">
 
@@ -10,32 +10,32 @@
 
 ## Introduction
 
-**ContentCatcher** ensures every video you watch is tracked, so you never miss intriguing content again. Your ultimate tool to break free from algorithmic filter bubbles.
+**ContentCatcher** helps you record every video browsing, so you won't miss any interesting content
 
-🔥 Never Miss a Moment - Track every video, combat algorithmic bias, and reclaim your browsing freedom.
+🔥 Every video browsing is recorded, never miss interesting content, your best companion to break free from algorithmic filter bubbles.
 
 ## Core Features
 
-### 🕸️ Intelligent Content Capture
-- **Silent Capture**: Background capture of all viewed videos, even if not bookmarked
-- **Multi-Platform**: Supports Bilibili, YouTube, and more via plugin-based architecture (expandable to any platform)
-- **Incognito Mode**: Works seamlessly in incognito mode to bypass recommendation algorithms
-- **Smart Filtering**: Smart ad filtering preserves only meaningful video content
+### 🕸️ Video Content Capture
+- **Auto Capture**: Silently captures video content in the background, preserving your browsing history even without manual bookmarking
+- **Multi-Platform Support**: Works with platforms like Bilibili/YouTube, with an extensible plugin architecture for any video site
+- **Incognito Mode**: Fully functional in incognito mode, helping you break free from algorithmic recommendations
+- **Smart Filtering**: Automatically filters out ads, keeping only valuable video content
 
-### 📋 Smart Content Management
-- **Clean Interface**: Clean timeline interface with platform-specific browsing history
-- **Auto-Tiered Storage**: Temporary records (7-day retention) + permanent bookmarks
-- **Smart Deduplication**: Merges repeat views automatically
+### 📋 Intelligent Content Management
+- **Clean Interface**: Browse your video history with a clean, platform-categorized interface
+- **Smart Storage**: Intelligent data management - keeps temporary records for a week, with one-click permanent saving for important content
+- **Auto Deduplication**: Automatically merges duplicate entries when you watch the same video multiple times
 
-### 🔐 Privacy by Design
-- **Local Storage**: 100% local storage – zero data uploads, zero tracking
-- **Lightweight**: No impact on browsing speed
-- **User Control**: No account required – you own your data
+### 🔐 Privacy & Security
+- **Local Storage**: All data stays on your device - no server uploads, complete privacy
+- **Lightweight**: Zero impact on your browsing experience
+- **User Control**: No account needed - you have full control over your data
 
-### 🧩 Extend & Customize
-- **Plugin Framework**: Open plugin framework for developers to add new platforms
-- **Wide Compatibility**: Full compatibility with Chrome/Edge browsers
+### 🧩 Extensions & Customization
+- **Plugin System**: Open plugin architecture lets developers add support for more video platforms
+- **Browser Support**: Works seamlessly with major browsers (Chrome/Edge)
 
 ---
 
-**ContentCatcher** is completely free, helping you not to miss out on truly interesting content in an information-overloaded era, ensuring every browsing experience is traceable. ❤️
+**ContentCatcher** is completely free, helping you keep track of interesting content in this information-rich era, making every browsing session memorable. ❤️
