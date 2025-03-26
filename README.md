@@ -48,19 +48,19 @@ ContentCatcher requires plugins to work with different video platforms. Here's h
 1. Install ContentCatcher from the Chrome Web Store (or other browser extension stores).
 2. Open the extension settings page by clicking on the ContentCatcher icon and selecting "Settings".
    
-   ![Go to settings](https://tvax4.sinaimg.cn/large/007WazT0ly1hztfdnx887j30sg0omjzw.jpg)
+   ![Go to settings](./assets/gotosetting_en.png)
 
 3. Download official plugins from the GitHub repository (https://github.com/GoldTools/ContentCatcher/tree/main/plugins).
 4. Drag the downloaded plugins into the ContentCatcher plugin management page.
    
-   ![Import plugins](https://tvax2.sinaimg.cn/large/007WazT0ly1hzufgloyrej30w00w744y.jpg)
+   ![Import plugins](./assets/import_en.png)
 
 > Note: Removing a plugin will automatically delete all video records associated with that platform.
 
 ### Basic Usage
 After installing ContentCatcher and importing plugins, visit supported websites to start capturing video content automatically.
 
-![Base usage](https://tvax4.sinaimg.cn/large/007WazT0ly1hzudp7fbnoj30vy0mrdy7.jpg)
+![Base usage](./assets/usage_en.png)
 
 #### Features
 - **Browsing History**: Videos you manually click or actively visit are recorded in the browsing history tab.
@@ -73,11 +73,11 @@ ContentCatcher manages your data intelligently:
 - Recommended video records are kept for 1 hour by default
 - Favorited videos are kept permanently until manually deleted
 
-![Settings](https://tvax4.sinaimg.cn/large/007WazT0ly1hzue6nyctjj30vy0mrn3i.jpg)
+![Settings](./assets/settings_en.png)
 
 ### Incognito Mode Support
 To use ContentCatcher in incognito mode:
 1. Open your browser's extension management page (e.g., chrome://extensions/)
 2. Find ContentCatcher, click "Details", and enable the "Allow in Incognito" option
 
-![Incognito mode](https://tvax1.sinaimg.cn/large/007WazT0ly1hzufseg8fvj30ic0npad8.jpg)
+![Incognito mode](./assets/incognito_en.png)
