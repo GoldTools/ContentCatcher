@@ -13,6 +13,7 @@
 - [Introduction](#introduction)
 - [Core Features](#core-features)
 - [Getting Started](#getting-started)
+- [Plugin List](#plugin-list)
 
 ## Introduction
 
@@ -87,3 +88,6 @@ To use ContentCatcher in incognito mode:
 2. Find ContentCatcher, click "Details", and enable the "Allow in Incognito" option
 
 ![Incognito mode](./assets/incognito_en.png)
+
+## Plugin List
+[Pugin List](./plugins/README.md)
