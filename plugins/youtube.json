@@ -4,11 +4,13 @@
     "name": "YouTube视频采集器",
     "version": "1.0.0",
     "author": "extension",
-    "description": "采集YouTube首页推荐和热门视频数据"
+    "description": "采集YouTube首页推荐和热门视频数据",
+    "type": "video"
   },
   "platform": {
     "name": "youtube",
     "domain": "www.youtube.com",
+    "home": "www.youtube.com",
     "icon": "https://www.youtube.com/favicon.ico"
   },
   "urlPatterns": {
