@@ -1,0 +1,89 @@
+{
+  "plugin": {
+    "id": "xiaohongshu",
+    "name": "小红书内容采集器",
+    "version": "1.0.0",
+    "author": "extension",
+    "description": "采集小红书首页推荐数据",
+    "type": "content"
+  },
+  "platform": {
+    "name": "xiaohongshu",
+    "domain": "www.xiaohongshu.com",
+    "home": "www.xiaohongshu.com/explore",
+    "icon": "https://www.xiaohongshu.com/favicon.ico"
+  },
+  "urlPatterns": {
+    "content": {
+      "pattern": "(?:(?:https?://)?(?:www\\.)?xiaohongshu\\.com)?/explore/([\\w]+)(?:\\?.*)?",
+      "idGroup": 1
+    }
+  },
+  "requestPatterns": [
+    {
+      "id": "feed",
+      "name": "首页信息流",
+      "urls": [".*edith\\.xiaohongshu\\.com/api/sns/web/v1/homefeed"],
+      "type": "xhr",
+      "method": "POST",
+      "parseResponse": {
+        "dataPath": "$.data.items",
+        "fields": {
+          "id": "$.id",
+          "title": "$.note_card.display_title",
+          "url": "${prefix:https://www.xiaohongshu.com/explore/}${$.id}?xsec_token=${$.xsec_token}&xsec_source=pc_feed",
+          "author": "$.note_card.user.nickname",
+          "thumbnail": "$.note_card.cover.url_default",
+          "like": "$.note_card.interact_info.liked_count"
+        }
+      },
+      "filter": {
+        "exclude": {
+          "required": ["$.id", "$.note_card.display_title", "$.xsec_token"]
+        }
+      }
+    }
+  ],
+  "clickSelectors": {
+    "container": "#exploreFeeds .note-item",
+    "fields": {
+      "title": ".footer .title span",
+      "url": "a.cover@href",
+      "author": ".footer .author-wrapper .author .name",
+      "thumbnail": "a.cover img@src",
+      "like": ".footer .like-wrapper .count"
+    }
+  },
+  "visitSelectors": {
+    "container": ".note-container",
+    "fields": {
+      "title": ".note-content .title",
+      "author": ".author-wrapper .username",
+      "thumbnail": ".swiper-slide:last-child .img-container img@src,xg-poster.xgplayer-poster@style[background-image]",
+      "like": ".interaction-container .interactions.engage-bar .engage-bar-container .engage-bar .interact-container .like-wrapper .count"
+    }
+  },
+  "ssr": {
+    "enabled": true,
+    "id": "ssr",
+    "name": "首页刷新-SSR",
+    "type": "dom",
+    "selectors": {
+      "container": "#exploreFeeds .note-item",
+      "fields": {
+        "title": ".footer .title span",
+        "url": "a.cover@href",
+        "author": ".footer .author-wrapper .author .name",
+        "thumbnail": "a.cover img@src",
+        "like": ".footer .like-wrapper .count"
+      }
+    },
+    "domObserver": {
+      "videoContainer": "#exploreFeeds .note-item",
+      "parentContainer": "#exploreFeeds",
+      "itemSelector": ".note-item",
+      "itemTagName": "SECTION",
+      "throttleDelay": 500
+    }
+  }
+}

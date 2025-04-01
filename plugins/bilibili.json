@@ -1,0 +1,120 @@
+{
+  "plugin": {
+    "id": "bilibili",
+    "name": "B站视频采集器",
+    "version": "1.0.0",
+    "author": "extension",
+    "description": "采集B站首页推荐和热门视频数据",
+    "type": "video"
+  },
+  "platform": {
+    "name": "bilibili",
+    "domain": "www.bilibili.com",
+    "home": "www.bilibili.com",
+    "icon": "https://www.bilibili.com/favicon.ico"
+  },
+  "urlPatterns": {
+    "video": {
+      "pattern": "www\\.bilibili\\.com/video/([A-Za-z0-9]+)",
+      "idGroup": 1
+    }
+  },
+  "requestPatterns": [
+    {
+      "id": "popular",
+      "name": "首页换一换",
+      "urls": [".*api\\.bilibili\\.com/x/web-interface/wbi/index/top/feed/rcmd\\?.*fresh_type=3.*"],
+      "type": "xhr",
+      "parseResponse": {
+        "dataPath": "$.data.item",
+        "fields": {
+          "id": "$.bvid",
+          "title": "$.title",
+          "url": "$.uri",
+          "author": "$.owner.name",
+          "viewCount": "$.stat.view",
+          "duration": "$.duration",
+          "thumbnail": "$.pic"
+        }
+      },
+      "filter": {
+        "exclude": {
+          "equal": {
+            "goto": "ad"
+          },
+          "required": ["bvid", "title", "uri"]
+        }
+      }
+    },
+    {
+      "id": "feed",
+      "name": "首页滚动信息流",
+      "urls": [".*api\\.bilibili\\.com/x/web-interface/wbi/index/top/feed/rcmd\\?.*fresh_type=4.*"],
+      "type": "xhr",
+      "parseResponse": {
+        "dataPath": "$.data.item",
+        "fields": {
+          "id": "$.bvid",
+          "title": "$.title",
+          "url": "$.uri",
+          "author": "$.owner.name",
+          "viewCount": "$.stat.view",
+          "duration": "$.duration",
+          "thumbnail": "$.pic"
+        }
+      },
+      "filter": {
+        "exclude": {
+          "equal": {
+            "goto": ["ad", "live"]
+          },
+          "required": ["bvid", "title", "uri"]
+        }
+      }
+    }
+  ],
+  "clickSelectors": {
+    "container": ".bili-video-card.is-rcmd",
+    "fields": {
+      "title": ".bili-video-card__info--tit",
+      "url": ".bili-video-card__image--link @href",
+      "author": ".bili-video-card__info--author",
+      "thumbnail": ".bili-video-card__image img@src",
+      "viewCount": ".bili-video-card__stats--left .bili-video-card__stats--item:first-child .bili-video-card__stats--text",
+      "duration": ".bili-video-card__stats__duration"
+    }
+  },
+  "visitSelectors": {
+    "container": "body",
+    "fields": {
+      "title": "h1.video-title",
+      "author": ".up-info__detail a.up-name",
+      "viewCount": "#viewbox_report .view.item",
+      "duration": ".bpx-player-ctrl-time-duration",
+      "thumbnail": ".video-capture-img img[src*='/bfs/archive/']@src"
+    },
+    "filter": {
+      "exclude": {
+        "selectors": [".live-status"]
+      }
+    }
+  },
+  "ssr": {
+    "enabled": true,
+    "id": "ssr",
+    "name": "首页刷新-SSR",
+    "type": "dom",
+    "selectors": {
+      "container": ".bili-video-card.is-rcmd",
+      "fields": {
+        "id": ".bili-video-card__info--id",
+        "title": ".bili-video-card__info--tit",
+        "url": ".bili-video-card__image--link @href",
+        "author": ".bili-video-card__info--author",
+        "thumbnail": ".bili-video-card__image img@src",
+        "viewCount": ".bili-video-card__stats--left .bili-video-card__stats--item:first-child .bili-video-card__stats--text",
+        "duration": ".bili-video-card__stats__duration"
+      }
+    }
+  }
+}
