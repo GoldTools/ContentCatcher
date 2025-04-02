@@ -7,41 +7,15 @@
 <img src="./assets/logo.png" alt="ContentCatcher Logo" width="120"/>
 
 
-<div style="display: flex; justify-content: center; gap: 12px; margin: 20px 0;">
-  <a href="https://chrome.google.com/webstore/detail/hdicimgeggokokkjfcamkegbpbcebogd" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background-color: white; color: #333; text-decoration: none; border-radius: 4px; border: 1px solid #ccc; font-weight: 500;">
-    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" role="img">
-      <g clip-path="url(#a)">
-        <path fill="#EA4335" d="M2.898 4.18C8.476-2.311 18.82-1.03 22.686 6.555h-9.293c-1.674 0-2.755-.038-3.926.578-1.376.725-2.414 2.068-2.777 3.645z"></path>
-        <path fill="#4285F4" d="M8.008 12c0 2.2 1.79 3.99 3.988 3.99 2.2 0 3.988-1.79 3.988-3.99s-1.789-3.99-3.988-3.99c-2.2 0-3.988 1.79-3.988 3.99"></path>
-        <path fill="#34A853" d="M13.544 17.223c-2.239.665-4.858-.073-6.293-2.55-1.096-1.89-3.99-6.932-5.305-9.224-4.607 7.06-.636 16.683 7.727 18.325l3.87-6.551z"></path>
-        <path fill="#FBBC05" d="M15.7 8.01a5.464 5.464 0 0 1 1.008 6.718 1860 1860 0 0 1-5.46 9.248c8.617.531 14.9-7.914 12.062-15.967z"></path>
-      </g>
-      <defs>
-        <clipPath id="a">
-          <path fill="#fff" d="M0 0h24v24H0z"></path>
-        </clipPath>
-      </defs>
-    </svg>
-    Chrome应用商店
+<p align="center">
+  <a href="https://chrome.google.com/webstore/detail/hdicimgeggokokkjfcamkegbpbcebogd">
+    Chrome 应用商店
   </a>
-  
-  <a href="https://microsoftedge.microsoft.com/addons/detail/giofekcbjmconbpfnogaonlebjecnael" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background-color: white; color: #333; text-decoration: none; border-radius: 4px; border: 1px solid #ccc; font-weight: 500;">
-    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" role="img">
-      <g clip-path="url(#a)">
-        <path fill="#0F5197" d="M21.65 17.854q-.477.255-.985.44a9.6 9.6 0 0 1-3.364.61c-4.433 0-8.295-3.046-8.295-6.964a2.94 2.94 0 0 1 1.537-2.559c-4.01.17-5.042 4.35-5.042 6.795 0 6.926 6.382 7.629 7.76 7.629.74 0 1.856-.216 2.53-.431l.123-.038a12 12 0 0 0 6.241-4.948.375.375 0 0 0-.307-.578.4.4 0 0 0-.199.044"></path>
-        <path fill="#0C88DA" d="M9.906 22.624a7.45 7.45 0 0 1-2.127-1.996A7.564 7.564 0 0 1 10.544 9.38c.446-.241.945-.37 1.452-.374a3.05 3.05 0 0 1 2.409 1.218c.379.507.588 1.12.6 1.752 0-.018 2.296-7.46-7.498-7.46-4.114 0-7.498 3.909-7.498 7.33a12.2 12.2 0 0 0 1.135 5.248A12.003 12.003 0 0 0 15.8 23.383a7.1 7.1 0 0 1-5.895-.759"></path>
-        <path fill="#2CC3D5" d="M14.274 13.955c-.075.094-.31.234-.31.534 0 .244.16.478.44.675 1.35.937 3.89.815 3.9.815a5.6 5.6 0 0 0 2.84-.777 5.75 5.75 0 0 0 2.848-4.958c.028-2.1-.75-3.496-1.059-4.115a10.3 10.3 0 0 0-1.962-2.668 11.6 11.6 0 0 0-3.344-2.275A13.65 13.65 0 0 0 11.997 0 11.996 11.996 0 0 0 0 11.828c.047-3.421 3.449-6.186 7.498-6.186.328 0 2.202.028 3.936.947 1.527.806 2.333 1.77 2.886 2.736.581 1.003.684 2.259.684 2.765s-.253 1.246-.73 1.865"></path>
-        <path fill="#49D668" d="M15.224.354s8.734 9.027-1.138 13.905c0 0-.638 1.06 2.41 1.608 0 0 5.051 1.097 7.09-3.34.41-1.392.776-3.549-.31-5.949a10 10 0 0 0-1.804-2.664 12.8 12.8 0 0 0-2.65-2.22c-1.605-.82-3.598-1.34-3.598-1.34"></path>
-      </g>
-      <defs>
-        <clipPath id="a">
-          <path fill="#fff" d="M0 0h24v24H0z"></path>
-        </clipPath>
-      </defs>
-    </svg>
-    Edge插件商店
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://microsoftedge.microsoft.com/addons/detail/giofekcbjmconbpfnogaonlebjecnael">
+    Edge 插件商店
   </a>
-</div>
+</p>
 </div>
 
 ## 目录
