@@ -67,7 +67,8 @@ ContentCatcher 需要插件才能与不同视频平台配合使用。以下是�
    
    ![进入设置](./assets/gotosetting_zh.png)
 
-3. 从 GitHub 仓库下载官方插件（https://github.com/GoldTools/ContentCatcher/tree/main/plugins）
+3. - 从 GitHub 仓库下载官方插件（https://github.com/GoldTools/ContentCatcher/tree/main/plugins）
+   - 国内可从 Gitee 仓库下载官方插件（https://gitee.com/boringtools/ContentCatcher/tree/main/plugins）
 4. 将下载的插件拖入 ContentCatcher 的插件管理页面
    
    ![导入插件](./assets/import_zh.png)

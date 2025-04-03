@@ -12,20 +12,32 @@
 
 ### Plugin Address
 
+github:
 https://github.com/GoldTools/ContentCatcher/blob/main/plugins/bilibili.json
+
+gitee:
+https://gitee.com/boringtools/ContentCatcher/blob/main/plugins/bilibili.json
 
 
 ## YouTube v1.0.0
 
 ### Plugin Address
 
+github:
 https://github.com/GoldTools/ContentCatcher/blob/main/plugins/youtube.json
+
+gitee:
+https://gitee.com/boringtools/ContentCatcher/blob/main/plugins/youtube.json
 
 
 ## Xiaohongshu v1.0.0
 
 ### Plugin Address
 
+github:
 https://github.com/GoldTools/ContentCatcher/blob/main/plugins/xiaohongshu.json
+
+gitee:
+https://gitee.com/boringtools/ContentCatcher/blob/main/plugins/xiaohongshu.json
 
 ...More coming soon
