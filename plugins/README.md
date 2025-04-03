@@ -22,4 +22,10 @@ https://github.com/GoldTools/ContentCatcher/blob/main/plugins/bilibili.json
 https://github.com/GoldTools/ContentCatcher/blob/main/plugins/youtube.json
 
 
+## Xiaohongshu v1.0.0
+
+### Plugin Address
+
+https://github.com/GoldTools/ContentCatcher/blob/main/plugins/xiaohongshu.json
+
 ...More coming soon

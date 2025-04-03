@@ -22,4 +22,10 @@ https://github.com/GoldTools/ContentCatcher/blob/main/plugins/bilibili.json
 https://github.com/GoldTools/ContentCatcher/blob/main/plugins/youtube.json
 
 
+## 小红书 v1.0.0
+
+### 插件地址
+
+https://github.com/GoldTools/ContentCatcher/blob/main/plugins/xiaohongshu.json
+
 ...More coming soon
