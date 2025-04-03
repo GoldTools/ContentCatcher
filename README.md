@@ -66,8 +66,8 @@ ContentCatcher requires plugins to work with different video platforms. Here's h
    
    ![Go to settings](./assets/gotosetting_en.png)
 
-3. - Download official plugins from the GitHub repository (https://github.com/GoldTools/ContentCatcher/tree/main/plugins).
-   - Download official plugins from the Gitee repository (https://gitee.com/boringtools/ContentCatcher/tree/main/plugins).
+3. Download official plugins from the GitHub repository (https://github.com/GoldTools/ContentCatcher/tree/main/plugins).
+
 4. Drag the downloaded plugins into the ContentCatcher plugin management page.
    
    ![Import plugins](./assets/import_en.png)
