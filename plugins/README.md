@@ -28,4 +28,18 @@ https://github.com/GoldTools/ContentCatcher/blob/main/plugins/youtube.json
 
 https://github.com/GoldTools/ContentCatcher/blob/main/plugins/xiaohongshu.json
 
+## X v1.0.0
+
+### Plugin Address
+
+https://github.com/GoldTools/ContentCatcher/blob/main/plugins/x.json
+
+## Weibo v1.0.0
+
+### Plugin Address
+
+https://github.com/GoldTools/ContentCatcher/blob/main/plugins/weibo.json
+
+
+
 ...More coming soon
