@@ -34,7 +34,7 @@
 
 ### 🕸️ Video Content Capture
 - **Auto Capture**: Silently captures video content in the background, preserving your browsing history even without manual bookmarking
-- **Multi-Platform Support**: Works with platforms like Bilibili/YouTube, with an extensible plugin architecture for any video site
+- **Multi-Platform Support**: Works with platforms like Bilibili/YouTube/X/Weibo/Xiaohongshu, with an extensible plugin architecture for any video site
 - **Incognito Mode**: Fully functional in incognito mode, helping you break free from algorithmic recommendations
 - **Smart Filtering**: Automatically filters out ads, keeping only valuable video content
 
