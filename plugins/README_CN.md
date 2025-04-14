@@ -26,4 +26,17 @@ https://github.com/GoldTools/ContentCatcher/blob/main/plugins/youtube.json
 
 https://github.com/GoldTools/ContentCatcher/blob/main/plugins/xiaohongshu.json
 
+## X v1.0.0
+
+### 插件地址
+
+https://github.com/GoldTools/ContentCatcher/blob/main/plugins/x.json
+
+## 微博 v1.0.0
+
+### 插件地址
+
+https://github.com/GoldTools/ContentCatcher/blob/main/plugins/weibo.json
+
+
 ...More coming soon

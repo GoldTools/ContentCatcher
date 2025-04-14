@@ -1,0 +1,147 @@
+{
+  "plugin": {
+    "id": "weibo",
+    "name": "微博内容采集器",
+    "version": "1.0.0",
+    "author": "extension",
+    "description": "采集微博首页推荐数据",
+    "type": "social"
+  },
+  "platform": {
+    "name": "weibo",
+    "domain": "weibo.com",
+    "home": "weibo\\.com(/newlogin)?",
+    "icon": "https://www.weibo.com/favicon.ico"
+  },
+  "urlPatterns": {
+    "social": {
+      "pattern": "(?:(?:https?://)?(?:www\\.)?weibo\\.com)?/[A-Za-z0-9]+/([A-Za-z0-9]+)",
+      "idGroup": 1
+    }
+  },
+  "settings": {
+    "privacyMode": false
+  },
+  "requestPatterns": [
+    {
+      "id": "all_follow",
+      "name": "全部关注",
+      "urls": [".*/ajax/feed/unreadfriendstimeline"],
+      "type": "xhr",
+      "parseResponse": {
+        "dataPath": "$.statuses",
+        "fields": {
+          "id": "$.mblogid",
+          "title": "$.text_raw",
+          "url": "${prefix:https://weibo.com}/${$.user.id}/${$.mblogid}",
+          "author": "$.user.screen_name",
+          "like": "$.attitudes_count",
+          "comments": "$.comments_count",
+          "reposts": "$.reposts_count",
+          "thumbnail": "$.pic_infos.^first.original.url,$.mix_media_info.items[@type=pic].data.original.url,$.page_info.page_pic"
+        }
+      },
+      "filter": {
+        "exclude": {
+          "required": ["$.user.id", "$.text_raw", "$.mblogid"]
+        }
+      }
+    },
+    {
+      "id": "latest_weibo",
+      "name": "最新微博",
+      "urls": [".*/ajax/feed/friendstimeline"],
+      "type": "xhr",
+      "parseResponse": {
+        "dataPath": "$.statuses",
+        "fields": {
+          "id": "$.mblogid",
+          "title": "$.text_raw",
+          "url": "${prefix:https://weibo.com}/${$.user.id}/${$.mblogid}",
+          "author": "$.user.screen_name",
+          "like": "$.attitudes_count",
+          "comments": "$.comments_count",
+          "reposts": "$.reposts_count",
+          "thumbnail": "$.pic_infos.^first.original.url,$.mix_media_info.items[@type=pic].data.original.url,$.page_info.page_pic"
+        }
+      },
+      "filter": {
+        "exclude": {
+          "required": ["$.user.id", "$.text_raw", "$.mblogid"]
+        }
+      }
+    },
+    {
+      "id": "group_weibo",
+      "name": "群微博",
+      "urls": [".*/ajax/feed/groupstimeline"],
+      "type": "xhr",
+      "parseResponse": {
+        "dataPath": "$.statuses",
+        "fields": {
+          "id": "$.mblogid",
+          "title": "$.text_raw",
+          "url": "${prefix:https://weibo.com}/${$.user.id}/${$.mblogid}",
+          "author": "$.user.screen_name",
+          "like": "$.attitudes_count",
+          "comments": "$.comments_count",
+          "reposts": "$.reposts_count",
+          "thumbnail": "$.pic_infos.^first.original.url,$.mix_media_info.items[@type=pic].data.original.url,$.page_info.page_pic"
+        }
+      },
+      "filter": {
+        "exclude": {
+          "required": ["$.user.id", "$.text_raw", "$.mblogid"]
+        }
+      }
+    },
+    {
+      "id": "hot_recommend",
+      "name": "热门推荐",
+      "urls": [".*/ajax/feed/hottimeline"],
+      "type": "xhr",
+      "parseResponse": {
+        "dataPath": "$.statuses",
+        "fields": {
+          "id": "$.mblogid",
+          "title": "$.text_raw",
+          "url": "${prefix:https://weibo.com}/${$.user.id}/${$.mblogid}",
+          "author": "$.user.screen_name",
+          "like": "$.attitudes_count",
+          "comments": "$.comments_count",
+          "reposts": "$.reposts_count",
+          "thumbnail": "$.pic_infos.^first.original.url,$.mix_media_info.items[@type=pic].data.original.url,$.page_info.page_pic"
+        }
+      },
+      "filter": {
+        "exclude": {
+          "required": ["$.user.id", "$.text_raw", "$.mblogid"]
+        }
+      }
+    }
+  ],
+  "clickSelectors": {
+    "trigger": ".wbpro-scroller-item div[class*='toolbar_main']",
+    "container": ".wbpro-scroller-item",
+    "fields": {
+      "title": "div[class*='detail_wbtext']",
+      "url": "header div[class*='head_main'] div[class*='head_content_wrap'] a[class*='head-info_time']@href",
+      "author": "header div[class*='head_main'] div[class*='head_content_wrap'] a[class*='head_name'] span",
+      "thumbnail": "div[class*='picture-box_row'] .woo-picture-main img[class*='picture_focusImg']@src,div[class*='card-video_videoBox'] .wbpv-poster@style[background-image]",
+      "like": "div[class*='toolbar_main'] div[class*='toolbar_like'] .woo-like-count",
+      "comments": "div[class*='toolbar_main'] div[class*='toolbar_cursor']:nth-of-type(2) span[class*='toolbar_num']",
+      "reposts": "div[class*='toolbar_main'] div[class*='toolbar_cursor']:nth-of-type(1) span[class*='toolbar_num']"
+    }
+  },
+  "visitSelectors": {
+    "container": "article.woo-panel-main",
+    "fields": {
+      "title": "div[class*='detail_wbtext']",
+      "author": "header div[class*='head_main'] div[class*='head_content_wrap'] a[class*='head_name'] span",
+      "thumbnail": "div[class*='picture-box_row'] .woo-picture-main img[class*='picture_focusImg']@src,div[class*='card-video_videoBox'] .wbpv-poster@style[background-image]",
+      "like": "div[class*='toolbar_main'] div[class*='toolbar_like'] .woo-like-count",
+      "comments": "div[class*='toolbar_main'] div[class*='toolbar_cursor'] div[class*='toolbar_cur'] span[class*='toolbar_num']",
+      "reposts": "div[class*='toolbar_main'] div[class*='toolbar_retweet'] span[class*='toolbar_num']"
+    }
+  }
+}

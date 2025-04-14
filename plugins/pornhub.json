@@ -1,0 +1,70 @@
+{
+  "plugin": {
+    "id": "pornhub",
+    "name": "Pornhub内容采集器",
+    "version": "1.0.0",
+    "author": "extension",
+    "description": "采集Pornhub首页推荐数据",
+    "type": "video"
+  },
+  "platform": {
+    "name": "pornhub",
+    "domain": "pornhub.com",
+    "home": ".*\\.pornhub\\.com(/video)?",
+    "icon": "https://pornhub.com/favicon.ico"
+  },
+  "urlPatterns": {
+    "video": {
+      "pattern": "(?:(?:https?://)?(?:www\\.)?pornhub\\.com)?/view_video\\.php\\?viewkey=([\\w]+)(?:\\?.*)?",
+      "idGroup": 1
+    }
+  },
+  "settings": {
+    "privacyMode": true
+  },
+  "clickSelectors": {
+    "container": ".pcVideoListItem.videoblock",
+    "fields": {
+      "title": ".thumbnail-info-wrapper .title a",
+      "url": ".thumbnail-info-wrapper .title a@href",
+      "author": ".videoUploaderBlock .usernameWrap a",
+      "viewCount": ".videoDetailBlock .views var",
+      "like": ".videoDetailBlock .neutral .value",
+      "thumbnail": ".videoPreviewBg img.js-videoThumb@src",
+      "duration": ".duration"
+    }
+  },
+  "visitSelectors": {
+    "container": ".video-wrapper.modelInfo",
+    "fields": {
+      "title": ".title-container .title",
+      "author": ".userInfoBlock .usernameWrap a",
+      "viewCount": ".video-actions-menu .views .count",
+      "like": ".video-actions-menu .ratingPercent .percent",
+      "thumbnail": ".videoElementPoster@src"
+    }
+  },
+  "ssr": {
+    "enabled": true,
+    "id": "ssr",
+    "name": "首页刷新-SSR",
+    "type": "dom",
+    "selectors": {
+      "container": ".pcVideoListItem.videoblock",
+      "fields": {
+        "title": ".thumbnail-info-wrapper .title a",
+        "url": ".thumbnail-info-wrapper .title a@href",
+        "author": ".videoUploaderBlock .usernameWrap a",
+        "thumbnail": ".videoPreviewBg img.js-videoThumb@src",
+        "viewCount": ".videoDetailBlock .views var,.videoDetailsBlock .views var",
+        "like": ".videoDetailBlock .neutral .value,.videoDetailsBlock .neutral .value",
+        "duration": ".duration"
+      }
+    },
+    "filter": {
+      "exclude": {
+        "selectors": []
+      }
+    }
+  }
+}

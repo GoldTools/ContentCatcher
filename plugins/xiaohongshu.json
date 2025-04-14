@@ -10,7 +10,7 @@
   "platform": {
     "name": "xiaohongshu",
     "domain": "www.xiaohongshu.com",
-    "home": "www.xiaohongshu.com/explore",
+    "home": "www\\.xiaohongshu\\.com/explore",
     "icon": "https://www.xiaohongshu.com/favicon.ico"
   },
   "urlPatterns": {
@@ -18,6 +18,9 @@
       "pattern": "(?:(?:https?://)?(?:www\\.)?xiaohongshu\\.com)?/explore/([\\w]+)(?:\\?.*)?",
       "idGroup": 1
     }
+  },
+  "settings": {
+    "privacyMode": false
   },
   "requestPatterns": [
     {

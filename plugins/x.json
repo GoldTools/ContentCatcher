@@ -1,0 +1,151 @@
+{
+  "plugin": {
+    "id": "x",
+    "name": "x内容采集器",
+    "version": "1.0.0",
+    "author": "extension",
+    "description": "采集x首页推荐数据",
+    "type": "social"
+  },
+  "platform": {
+    "name": "x",
+    "domain": "x.com",
+    "home": "x\\.com",
+    "icon": "https://x.com/favicon.ico"
+  },
+  "urlPatterns": {
+    "social": {
+      "pattern": "(?:(?:https?://)?(?:www\\.)?x\\.com)?/[A-Za-z0-9_]+/status/([A-Za-z0-9]+)",
+      "idGroup": 1
+    }
+  },
+  "settings": {
+    "privacyMode": true
+  },
+  "requestPatterns": [
+    {
+      "id": "x_timeline",
+      "name": "X首页时间线",
+      "urls": [".*/x\\.com/i/api/graphql/.+/HomeTimeline"],
+      "type": "xhr",
+      "parseResponse": {
+        "dataPath": "$.data.home.home_timeline_urt.instructions.0.entries",
+        "fields": {
+          "id": "$.content.itemContent.tweet_results.result.rest_id",
+          "title": "$.content.itemContent.tweet_results.result.legacy.full_text",
+          "url": "${prefix:https://x.com/}${$.content.itemContent.tweet_results.result.core.user_results.result.legacy.screen_name}/status/${$.content.itemContent.tweet_results.result.rest_id}",
+          "author": "$.content.itemContent.tweet_results.result.core.user_results.result.legacy.screen_name",
+          "name": "$.content.itemContent.tweet_results.result.core.user_results.result.legacy.name",
+          "like": "$.content.itemContent.tweet_results.result.legacy.favorite_count",
+          "comments": "$.content.itemContent.tweet_results.result.legacy.reply_count",
+          "reposts": "$.content.itemContent.tweet_results.result.legacy.retweet_count",
+          "viewCount": "$.content.itemContent.tweet_results.result.views.count",
+          "thumbnail": "$.content.itemContent.tweet_results.result.legacy.entities.media.0.media_url_https"
+        }
+      },
+      "filter": {
+        "exclude": {
+          "equal": {
+            "$.content.clientEventInfo.component": "for_you_promoted"
+          },
+          "required": [
+            "$.content.itemContent.tweet_results.result.rest_id",
+            "$.content.itemContent.tweet_results.result.legacy.full_text"
+          ]
+        }
+      }
+    },
+    {
+      "id": "x_latest_timeline",
+      "name": "X最新时间线",
+      "urls": [".*/x\\.com/i/api/graphql/.+/HomeLatestTimeline"],
+      "type": "xhr",
+      "parseResponse": {
+        "dataPath": "$.data.home.home_timeline_urt.instructions.0.entries",
+        "fields": {
+          "id": "$.content.itemContent.tweet_results.result.rest_id",
+          "title": "$.content.itemContent.tweet_results.result.legacy.full_text",
+          "url": "${prefix:https://x.com/}${$.content.itemContent.tweet_results.result.core.user_results.result.legacy.screen_name}/status/${$.content.itemContent.tweet_results.result.rest_id}",
+          "author": "$.content.itemContent.tweet_results.result.core.user_results.result.legacy.screen_name",
+          "name": "$.content.itemContent.tweet_results.result.core.user_results.result.legacy.name",
+          "like": "$.content.itemContent.tweet_results.result.legacy.favorite_count",
+          "comments": "$.content.itemContent.tweet_results.result.legacy.reply_count",
+          "reposts": "$.content.itemContent.tweet_results.result.legacy.retweet_count",
+          "viewCount": "$.content.itemContent.tweet_results.result.views.count",
+          "thumbnail": "$.content.itemContent.tweet_results.result.legacy.entities.media.0.media_url_https"
+        }
+      },
+      "filter": {
+        "exclude": {
+          "equal": {
+            "$.content.clientEventInfo.component": "for_you_promoted"
+          },
+          "required": [
+            "$.content.itemContent.tweet_results.result.rest_id",
+            "$.content.itemContent.tweet_results.result.legacy.full_text"
+          ]
+        }
+      }
+    },
+    {
+      "id": "x_search_timeline",
+      "name": "X搜索时间线",
+      "urls": [".*/x\\.com/i/api/graphql/.+/SearchTimeline"],
+      "type": "xhr",
+      "parseResponse": {
+        "dataPath": "$.data.search_by_raw_query.search_timeline.timeline.instructions.0.entries",
+        "fields": {
+          "id": "$.content.itemContent.tweet_results.result.rest_id",
+          "title": "$.content.itemContent.tweet_results.result.legacy.full_text",
+          "url": "${prefix:https://x.com/}${$.content.itemContent.tweet_results.result.core.user_results.result.legacy.screen_name}/status/${$.content.itemContent.tweet_results.result.rest_id}",
+          "author": "$.content.itemContent.tweet_results.result.core.user_results.result.legacy.screen_name",
+          "name": "$.content.itemContent.tweet_results.result.core.user_results.result.legacy.name",
+          "like": "$.content.itemContent.tweet_results.result.legacy.favorite_count",
+          "comments": "$.content.itemContent.tweet_results.result.legacy.reply_count",
+          "reposts": "$.content.itemContent.tweet_results.result.legacy.retweet_count",
+          "viewCount": "$.content.itemContent.tweet_results.result.views.count",
+          "thumbnail": "$.content.itemContent.tweet_results.result.legacy.entities.media.0.media_url_https"
+        }
+      },
+      "filter": {
+        "exclude": {
+          "equal": {
+            "$.content.clientEventInfo.component": "for_you_promoted"
+          },
+          "required": [
+            "$.content.itemContent.tweet_results.result.rest_id",
+            "$.content.itemContent.tweet_results.result.legacy.full_text"
+          ]
+        }
+      }
+    }
+  ],
+  "clickSelectors": {
+    "trigger": "div[aria-label*='replies'][aria-label*='reposts'][aria-label*='likes'][aria-label*='views'][aria-label*='bookmarks'][role='group']",
+    "container": "div[data-testid='cellInnerDiv'] article[data-testid='tweet']",
+    "fields": {
+      "title": "div[data-testid='tweetText']",
+      "url": "a[href*='/status/']:has(time)@href",
+      "author": "div[data-testid='User-Name'] > div:nth-child(2) span",
+      "name": "div[data-testid='User-Name'] > div:nth-child(1) span",
+      "like": "button[data-testid='like'] span[data-testid='app-text-transition-container'] span",
+      "comments": "button[data-testid='reply'] span[data-testid='app-text-transition-container'] span",
+      "reposts": "button[data-testid='retweet'] span[data-testid='app-text-transition-container'] span",
+      "viewCount": "a[aria-label*='views'] span[data-testid='app-text-transition-container'] span",
+      "thumbnail": "div[data-testid='tweetPhoto'] div[data-testid='videoPlayer'] video@poster,div[data-testid='tweetPhoto'] img@src"
+    }
+  },
+  "visitSelectors": {
+    "container": "article[data-testid='tweet']",
+    "fields": {
+      "title": "div[data-testid='tweetText']",
+      "author": "div[data-testid='User-Name'] > div:nth-child(2) span",
+      "name": "div[data-testid='User-Name'] > div:nth-child(1) span",
+      "like": "button[data-testid='like'] span[data-testid='app-text-transition-container'] span",
+      "comments": "button[data-testid='reply'] span[data-testid='app-text-transition-container'] span",
+      "reposts": "button[data-testid='retweet'] span[data-testid='app-text-transition-container'] span",
+      "viewCount": "span[data-testid='app-text-transition-container'] span",
+      "thumbnail": "div[data-testid='tweetPhoto'] div[data-testid='videoPlayer'] video@poster,div[data-testid='tweetPhoto'] img@src"
+    }
+  }
+}

@@ -10,7 +10,7 @@
   "platform": {
     "name": "bilibili",
     "domain": "www.bilibili.com",
-    "home": "www.bilibili.com",
+    "home": "www\\.bilibili\\.com",
     "icon": "https://www.bilibili.com/favicon.ico"
   },
   "urlPatterns": {
@@ -18,6 +18,9 @@
       "pattern": "www\\.bilibili\\.com/video/([A-Za-z0-9]+)",
       "idGroup": 1
     }
+  },
+  "settings": {
+    "privacyMode": false
   },
   "requestPatterns": [
     {
